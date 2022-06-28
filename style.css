@@ -1,0 +1,185 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    max-width: 28rem;
+    height: 100vh;
+    background: #FEF7E0;
+    padding: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0,0,0,.25);
+}
+
+header {
+    display: flex;
+    gap: 20px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.title > h1 {
+    font-family: temeraire,serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: clamp(1rem, 10vw, 2.5rem);
+    line-height: 1.2;
+    color: #233975;
+}
+
+.title > p {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-size: 0.875rem;
+    color: rgb(82, 82, 82);
+}
+
+.artwork {
+    flex: 1;
+    position: relative;
+}
+
+#diamond3 {
+animation: diamond3 1s infinite alternate-reverse;
+}
+@keyframes diamond3 {
+    0% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+#diamond4 {
+animation: diamond4 1s infinite alternate-reverse;
+}
+@keyframes diamond4 {
+    0% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+#diamond9 {
+animation: diamond9 0.3s infinite alternate-reverse;
+}
+@keyframes diamond9 {
+    0% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+
+#halfCircleYellow {
+    animation: halfCircleYellow 7s infinite ease-in-out  alternate;
+}
+@keyframes halfCircleYellow {
+    0% { transform: translateY(0);}
+    70%, 100% { transform: translateY(135px);}
+
+}
+
+#logo {
+    animation: logo 7s infinite alternate;
+}
+@keyframes logo {
+    0% { opacity: 0;}
+    62% {opacity: 0;}
+    70% { opacity: 1;}
+    100% {opacity: 1;}
+}
+
+
+#halfCircleGray {
+    animation: halfCircleGray 7s infinite ease-in-out alternate;
+}
+@keyframes halfCircleGray {
+    0% { transform: translateY(0);}
+    70%, 100% { transform: translateY(-135px);}
+}
+
+
+#starGray {
+    animation: starGray 3s infinite ease-in-out alternate;
+}
+@keyframes starGray {
+    0% { transform: translateX(0);}
+    100% { transform: translateX(410px);}
+}
+
+#starBlue, #starGreen {
+    animation: starBlue 0.5s infinite alternate;
+}
+@keyframes starBlue {
+    0% { opacity: 1}
+    100% {opacity: 0.5;}
+}
+
+#starYellow, #starYellow2 {
+    animation: starYellow 1s infinite alternate;
+}
+@keyframes starYellow {
+    0% { opacity: 1}
+    100% {opacity: 0;}
+}
+
+#tanganBiru {
+    animation: SlideRight 5s ease-out infinite alternate;
+}
+
+#jempolBiru {
+    animation: SlideRight 5s ease-out infinite alternate;
+}
+
+#tanganIjo {
+    animation: SlideLeft 5s ease-out infinite alternate;
+}
+#jempolIjo {
+    animation: SlideLeft 5s ease-out infinite alternate;
+}
+
+#bigStar{
+    animation: Rotate 10s linear infinite;
+    width: 50%;
+    transform-origin: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: fit-content;
+}
+
+@keyframes SlideRight {
+    0% { transform: translateX(-500px) }
+    80% { transform: translateX(0px) }
+    100% { transform: translateX(0px) }
+}
+@keyframes SlideLeft {
+    0% { transform: translateX(500px) }
+    80% { transform: translateX(0px) }
+    100% { transform: translateX(0px) }
+}
+
+@keyframes Rotate  {
+    0% { transform: rotate(0deg);     
+    }
+    100% { transform: rotate(360deg);   
+    }
+}
+
+
+#smoke1, #smoke2, #smoke3 {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 1000;
+    animation: smoke1 8s linear infinite reverse;
+  }
+
+@keyframes smoke1 {
+    to {
+        stroke-dashoffset: 0;
+      }
+}
+
